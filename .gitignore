@@ -1,0 +1,8 @@
+# 내부 작업 파일 (공개하지 않음)
+build/
+preview/
+dist/
+DEPLOY.md
+README.md
+.cache/
+*.zip

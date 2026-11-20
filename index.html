@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>써니 스튜디오 | 해외 원격 · AI 업무 자동화 · 수익 구조 스튜디오</title>
+<meta name="description" content="해외 원격 커리어와 AI 업무 자동화를 축으로 문서·콘텐츠·디지털 상품을 만들고 납품하는 1인 스튜디오. 화상 회의 없이 서면으로만 진행합니다. 블로그·뉴스레터 월간 대행, 영문 이력서 ATS 최적화 48시간 납품, PTE 90점 실전 세트.">
+<meta name="theme-color" content="#0A1628">
+<meta name="author" content="Sunny Studio">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="써니 스튜디오">
+<meta property="og:title" content="써니 스튜디오 | 해외 원격 · AI 업무 자동화 · 수익 구조">
+<meta property="og:description" content="문서·콘텐츠·디지털 상품을 설계하고 납품하는 1인 스튜디오. 화상 없이, 서면으로만 진행합니다.">
+<meta property="og:image" content="assets/og-1200x630.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/og-1200x630.png">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1628; --navy-2:#0E2038; --navy-3:#16304F;
+  --ink:#0D1726; --body:#43536E; --muted:#5F6D84;
+  --line:#E6E8EE; --cream:#FAF9F5; --white:#fff;
+  --gold:#C79A2E; --gold-ink:#8A6A16; --gold-bright:#E4BC5A; --gold-tint:#FBF3DE;
+  --emerald:#0E7268; --emerald-tint:#E7F4F1;
+  --radius:14px; --shadow:0 10px 30px rgba(13,23,38,.07);
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  margin:0; background:var(--white); color:var(--ink);
+  font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:17px; line-height:1.7; letter-spacing:-0.01em;
+  word-break:keep-all; overflow-wrap:break-word;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute; left:-9999px; top:0; z-index:100; background:#fff; color:var(--ink); padding:12px 16px; border-radius:0 0 10px 0; font-weight:700; text-decoration:none; box-shadow:var(--shadow)}
+.skip-link:focus{left:0}
+
+/* ── 헤더 ─────────────────────────────── */
+header.site{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(180%) blur(14px);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid transparent; transition:border-color .2s, box-shadow .2s;
+}
+header.site.is-stuck{border-bottom-color:var(--line); box-shadow:0 2px 14px rgba(13,23,38,.05)}
+.bar{display:flex; align-items:center; justify-content:space-between; height:70px; gap:16px}
+.brand{display:flex; align-items:center; gap:11px; text-decoration:none}
+.brand img{width:36px; height:36px; border-radius:50%}
+.brand .name{font-weight:700; font-size:16.5px; letter-spacing:-.01em}
+.brand .name small{display:block; font-size:10.5px; font-weight:600; letter-spacing:.16em; color:var(--muted); text-transform:uppercase; line-height:1.4}
+nav.main{display:flex; align-items:center; gap:26px}
+nav.main a{font-size:14.5px; font-weight:500; color:var(--body); text-decoration:none; padding:6px 0; border-bottom:1.5px solid transparent}
+nav.main a:hover{color:var(--ink); border-bottom-color:var(--gold)}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  font-size:15px; font-weight:700; line-height:1; text-decoration:none;
+  padding:14px 22px; border-radius:10px; border:1px solid transparent;
+  transition:transform .12s ease, box-shadow .2s, background .2s, color .2s;
+}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:linear-gradient(135deg,#E4BC5A,#C79A2E); color:#22190A; box-shadow:0 6px 18px rgba(199,154,46,.28)}
+.btn-gold:hover{box-shadow:0 8px 24px rgba(199,154,46,.38)}
+.btn-dark{background:var(--navy); color:#fff}
+.btn-dark:hover{background:var(--navy-3)}
+.btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.34)}
+.btn-ghost:hover{background:rgba(255,255,255,.09)}
+.btn-line{background:#fff; color:var(--ink); border-color:#D8DCE5}
+.btn-line:hover{border-color:var(--ink)}
+.btn-sm{padding:10px 16px; font-size:13.5px; border-radius:9px}
+.mobile-menu{display:none}
+.menu{display:none; background:none; border:0; padding:8px; cursor:pointer}
+.menu span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; transition:.2s}
+.menu[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── 히어로 ───────────────────────────── */
+.hero{
+  position:relative; color:#fff; overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 78% 12%, rgba(199,154,46,.22), transparent 62%),
+    radial-gradient(720px 480px at 8% 88%, rgba(14,114,104,.30), transparent 66%),
+    linear-gradient(155deg,#0A1628 0%,#0C1C31 52%,#0A1628 100%);
+}
+.hero::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:72px 72px;
+  mask-image:radial-gradient(80% 60% at 50% 30%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(80% 60% at 50% 30%,#000 20%,transparent 78%);
+}
+.hero .grid{position:relative; z-index:1; display:grid; grid-template-columns:1.12fr .88fr; gap:56px; align-items:center; padding-top:86px; padding-bottom:74px}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:9px; margin:0 0 22px;
+  font-size:11.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-bright);
+}
+.eyebrow::before{content:""; width:26px; height:1px; background:var(--gold-bright); opacity:.8}
+.hero h1{
+  margin:0 0 22px; font-size:clamp(2.15rem,4.4vw,3.35rem); line-height:1.24; font-weight:900; letter-spacing:-.035em;
+}
+.hero h1 em{font-style:normal; color:var(--gold-bright)}
+.hero .lede{margin:0 0 32px; max-width:36em; font-size:17.5px; line-height:1.78; color:#C7D2E2}
+.hero .actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.hero .foot{margin:20px 0 0; font-size:13px; color:#8FA0B8; letter-spacing:.01em}
+.hero .foot span{white-space:nowrap}
+.hero .foot i{font-style:normal; color:#4C6080; margin:0 8px}
+
+/* 히어로 우측 카드 */
+.studio-card{
+  position:relative; border-radius:20px; padding:30px;
+  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 30px 70px rgba(0,0,0,.35);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+}
+.studio-card .top{display:flex; align-items:center; gap:14px; padding-bottom:20px; border-bottom:1px solid rgba(255,255,255,.12)}
+.studio-card .top img{width:56px; height:56px}
+.studio-card .top b{display:block; font-size:15.5px; letter-spacing:-.01em}
+.studio-card .top span{display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#93A5BE; margin-top:3px}
+.studio-card ul{list-style:none; margin:0; padding:6px 0 0}
+.studio-card li{display:flex; align-items:baseline; gap:12px; padding:11px 0; border-bottom:1px dashed rgba(255,255,255,.10); font-size:14px; color:#CBD6E6}
+.studio-card li:last-child{border-bottom:0; padding-bottom:0}
+.studio-card li b{min-width:74px; font-size:17px; font-weight:800; color:#fff; font-variant-numeric:tabular-nums}
+.studio-card li b i{font-style:normal; font-size:12px; font-weight:600; color:var(--gold-bright); margin-left:2px}
+.studio-card .note{margin:18px 0 0; padding-top:16px; border-top:1px solid rgba(255,255,255,.12); font-size:11.5px; color:#8296B0; line-height:1.6}
+
+/* ── 공통 섹션 ────────────────────────── */
+section{padding:88px 0}
+section[id],div[id]{scroll-margin-top:86px}
+.sec-head{max-width:720px; margin:0 0 44px}
+.sec-head .kicker{
+  display:inline-block; margin:0 0 14px; font-size:11.5px; font-weight:700; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gold-ink);
+}
+.sec-head h2{margin:0 0 14px; font-size:clamp(1.55rem,2.6vw,2.1rem); line-height:1.34; font-weight:800; letter-spacing:-.03em}
+.sec-head p{margin:0; color:var(--body); font-size:16px; line-height:1.75}
+.cream{background:var(--cream)}
+.center{text-align:center; margin-left:auto; margin-right:auto}
+
+/* ── 하는 일 ──────────────────────────── */
+.works{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.quote{margin:34px 0 0; padding:30px 34px; border-left:3px solid var(--gold); background:var(--cream); border-radius:0 12px 12px 0}
+.quote p{margin:0 0 12px; font-size:17px; line-height:1.75; font-weight:500; color:var(--ink); letter-spacing:-.015em}
+.quote footer{font-size:12.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.work{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px 26px; box-shadow:var(--shadow)}
+.work .no{font-size:11.5px; font-weight:800; letter-spacing:.14em; color:var(--gold-ink)}
+.work h3{margin:10px 0 10px; font-size:18px; font-weight:800; letter-spacing:-.02em}
+.work p{margin:0; font-size:14.5px; color:var(--body); line-height:1.72}
+.work ul{margin:14px 0 0; padding:0; list-style:none; font-size:13.5px; color:var(--muted)}
+.work ul li{padding:5px 0 5px 15px; position:relative}
+.work ul li::before{content:""; position:absolute; left:0; top:12px; width:5px; height:5px; border-radius:50%; background:var(--emerald); opacity:.7}
+
+/* ── 서비스 카드 ──────────────────────── */.services{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.svc{
+  position:relative; display:flex; flex-direction:column;
+  background:#fff; border:1px solid var(--line); border-radius:18px; padding:30px 30px 26px;
+  box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .2s, border-color .2s;
+}
+.svc:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(13,23,38,.10); border-color:#D5DAE4}
+.svc.featured{border-color:var(--navy); box-shadow:0 16px 44px rgba(10,22,40,.16)}
+.svc .badge{
+  position:absolute; top:-11px; left:28px; background:var(--navy); color:#F4E3B6;
+  font-size:11px; font-weight:700; letter-spacing:.12em; padding:5px 11px; border-radius:99px;
+}
+.svc .type{font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--emerald)}
+.svc h3{margin:10px 0 8px; font-size:20px; line-height:1.42; font-weight:800; letter-spacing:-.025em}
+.svc .price{margin:0 0 4px; font-size:26px; font-weight:800; letter-spacing:-.03em; font-variant-numeric:tabular-nums}
+.svc .price small{font-size:13.5px; font-weight:600; color:var(--muted); margin-left:6px; letter-spacing:0}
+.svc .sub{margin:0 0 18px; font-size:13.5px; color:var(--muted)}
+.svc ul{list-style:none; margin:0 0 22px; padding:0; font-size:14.5px; color:var(--body)}
+.svc ul li{position:relative; padding:7px 0 7px 24px; border-top:1px solid #F0F2F6}
+.svc ul li:first-child{border-top:0}
+.svc ul li::before{
+  content:""; position:absolute; left:3px; top:16px; width:9px; height:9px;
+  border:2px solid var(--gold); border-radius:50%;
+}
+.svc .foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:6px}
+.svc .foot .lead{font-size:12.5px; color:var(--muted)}
+.svc .foot a{white-space:nowrap}
+
+/* ── 프로세스 ─────────────────────────── */
+.steps{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; counter-reset:s}
+.step{position:relative; padding:26px 22px 24px; background:#fff; border:1px solid var(--line); border-radius:var(--radius)}
+.step::before{
+  counter-increment:s; content:"0" counter(s);
+  display:block; font-size:11.5px; font-weight:800; letter-spacing:.16em; color:var(--gold-ink); margin-bottom:12px;
+}
+.step h3{margin:0 0 8px; font-size:16px; font-weight:800}
+.step p{margin:0; font-size:13.8px; color:var(--body); line-height:1.7}
+.promise{margin-top:26px; background:var(--navy); color:#D7E0EC; border-radius:var(--radius); padding:26px 30px; display:grid; grid-template-columns:1fr 1fr; gap:26px}
+.promise h3{margin:0 0 10px; color:#fff; font-size:15.5px; font-weight:800}
+.promise ul{margin:0; padding:0; list-style:none; font-size:14px; line-height:1.75}
+.promise ul li{position:relative; padding-left:18px}
+.promise ul li::before{content:""; position:absolute; left:0; top:11px; width:6px; height:1px; background:var(--gold-bright)}
+.promise .no li::before{background:#6E7F98}
+
+/* ── 디지털 킷 ────────────────────────── */
+.kits{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.kit{display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:28px 26px; box-shadow:var(--shadow)}
+.kit .tag{display:inline-block; align-self:flex-start; font-size:11px; font-weight:700; letter-spacing:.1em; padding:5px 10px; border-radius:99px; background:var(--gold-tint); color:#8A6A16; margin-bottom:14px}
+.kit .tag.green{background:var(--emerald-tint); color:#0B5A52}
+.kit .tag.navy{background:#EAEFF6; color:#213D5E}
+.kit h3{margin:0 0 8px; font-size:17.5px; font-weight:800; line-height:1.45; letter-spacing:-.02em}
+.kit p{margin:0 0 18px; font-size:14px; color:var(--body); line-height:1.7}
+.kit .price{font-size:19px; font-weight:800; margin:0 0 16px; font-variant-numeric:tabular-nums}
+.kit .price small{font-size:12.5px; font-weight:600; color:var(--muted); margin-left:5px}
+.kit a{margin-top:auto; align-self:flex-start}
+
+/* ── 아카이브 ─────────────────────────── */
+.archive{display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:start}
+.letter-card{
+  background:linear-gradient(160deg,#0E2038,#0A1628); color:#fff; border-radius:18px; padding:34px;
+  box-shadow:0 22px 50px rgba(10,22,40,.22);
+}
+.letter-card .lab{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-bright); font-weight:700}
+.letter-card h3{margin:12px 0 10px; font-size:22px; font-weight:800; letter-spacing:-.025em}
+.letter-card p{margin:0 0 22px; font-size:14.5px; color:#BBC8DA; line-height:1.75}
+.letter-card .fine{margin:16px 0 0; font-size:12px; color:#8296B0}
+.channels{display:grid; gap:2px; border-top:1px solid var(--line)}
+.channel{
+  display:grid; grid-template-columns:1fr auto; align-items:center; gap:16px;
+  padding:17px 4px; border-bottom:1px solid var(--line); text-decoration:none; transition:padding-left .16s, color .16s;
+}
+.channel:hover{padding-left:10px}
+.channel .t{font-size:15.5px; font-weight:700; letter-spacing:-.01em}
+.channel .d{display:block; font-size:13px; font-weight:400; color:var(--muted); margin-top:3px}
+.channel .go{font-size:13px; font-weight:700; color:var(--gold-ink); white-space:nowrap}
+
+/* ── FAQ ──────────────────────────────── */
+.faq{max-width:820px}
+details{border-bottom:1px solid var(--line); padding:20px 0}
+details summary{
+  cursor:pointer; list-style:none; font-size:16px; font-weight:700; display:flex; justify-content:space-between; gap:18px; align-items:flex-start;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+"; font-size:20px; font-weight:400; color:var(--gold-ink); line-height:1; transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:12px 0 0; font-size:14.5px; color:var(--body); line-height:1.78}
+
+/* ── 문의 밴드 ────────────────────────── */
+.contact{
+  position:relative; color:#fff; overflow:hidden; padding:80px 0;
+  background:
+    radial-gradient(760px 420px at 82% 18%, rgba(199,154,46,.24), transparent 62%),
+    linear-gradient(150deg,#0A1628,#102542 60%,#0A1628);
+}
+.contact .inner{display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center}
+.contact h2{margin:0 0 14px; font-size:clamp(1.6rem,2.7vw,2.15rem); font-weight:900; letter-spacing:-.03em; line-height:1.34}
+.contact p{margin:0 0 8px; color:#C0CDDE; font-size:15.5px; line-height:1.75; max-width:32em}
+.contact .fine{font-size:12.5px; color:#93A5BD; margin-top:14px}
+.contact .box{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:16px; padding:28px}
+.contact .box h3{margin:0 0 6px; font-size:15px; font-weight:800}
+.contact .box p{margin:0 0 18px; font-size:13px; color:#A9B9CD}
+.contact .box .actions{display:grid; gap:10px}
+.mail{display:inline-block; margin-top:14px; font-size:13.5px; color:#D9C68F; text-decoration:none; border-bottom:1px solid rgba(217,198,143,.4)}
+
+/* ── 푸터 ─────────────────────────────── */
+footer.site{background:#08111F; color:#8494A8; padding:46px 0 40px; font-size:13px}
+footer.site .top{display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; padding-bottom:26px; border-bottom:1px solid #16283F}
+footer.site .brand .name{color:#fff; font-size:15px; font-weight:700}
+footer.site .brand .name small{color:#7C8CA2}
+footer.site .brand img{width:34px;height:34px}
+footer.site nav{display:flex; flex-wrap:wrap; gap:22px}
+footer.site nav a{color:#9FB0C6; text-decoration:none; font-size:13px}
+footer.site nav a:hover{color:#fff}
+footer.site .bottom{padding-top:24px; display:grid; gap:8px; font-size:12px; line-height:1.75; color:#7C8CA2}
+footer.site .bottom strong{color:#93A5BD; font-weight:600}
+
+/* ── 등장 효과 ─────────────────────────── */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1; transform:none; transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ── 반응형 ───────────────────────────── */
+@media (max-width:980px){
+  .hero .grid{grid-template-columns:1fr; gap:40px; padding-top:64px; padding-bottom:56px}
+  .studio-card{max-width:520px}
+  .works{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .kits{grid-template-columns:1fr}
+  .archive{grid-template-columns:1fr; gap:30px}
+  .promise{grid-template-columns:1fr}
+  .contact .inner{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  section{padding:62px 0}
+  .wrap{padding:0 20px}
+  nav.main{display:none}
+  .menu{display:block}
+  .hero .grid{padding-top:44px; padding-bottom:40px}
+  .hero .lede{font-size:16px}
+  .steps{grid-template-columns:1fr}
+  .svc{padding:26px 22px 22px}
+  .svc .foot{flex-wrap:wrap}
+  .svc .foot a{width:100%; text-align:center}
+  .studio-card{padding:24px}
+  .contact{padding:60px 0}
+  footer.site .top{flex-direction:column; gap:20px}
+}
+@media (max-width:760px){
+  .mobile-menu{
+    position:fixed; inset:70px 0 auto 0; z-index:49; background:#fff; border-bottom:1px solid var(--line);
+    padding:10px 20px 22px; box-shadow:0 18px 30px rgba(13,23,38,.10);
+    display:none;
+  }
+  .mobile-menu.open{display:block}
+  .cta-top{display:none}
+  .mobile-menu a{display:block; padding:14px 4px; border-bottom:1px solid #F1F3F7; text-decoration:none; font-size:15.5px; font-weight:600}
+  .mobile-menu .btn{margin-top:16px; width:100%}
+}
+</style>
+<noscript><style>.reveal{opacity:1 !important; transform:none !important}</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#main">본문으로 바로 가기</a>
+
+<header class="site" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="써니 스튜디오 홈">
+      <img src="assets/logo-128.png" alt="">
+      <span class="name">써니 스튜디오<small>Sunny Studio</small></span>
+    </a>
+    <nav class="main" aria-label="주요 메뉴">
+      <a href="#works">하는 일</a>
+      <a href="#services">서비스</a>
+      <a href="#kits">실전 킷</a>
+      <a href="#archive">아카이브</a>
+      <a href="#faq">자주 묻는 것</a>
+    </nav>
+    <a class="btn btn-dark btn-sm cta-top" href="https://maily.so/sunnyincome" target="_blank" rel="noopener">무료 레터 받기</a>
+    <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#works">하는 일</a>
+    <a href="#services">서비스</a>
+    <a href="#kits">실전 킷</a>
+    <a href="#archive">아카이브</a>
+    <a href="#faq">자주 묻는 것</a>
+    <a class="btn btn-gold" href="https://maily.so/sunnyincome" target="_blank" rel="noopener">무료 레터 받기</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 히어로 -->
+  <div class="hero">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">Global remote · AI workflow · Income systems</p>
+        <h1>혼자서도 굴러가는<br><em>수익 구조</em>를 만듭니다.</h1>
+        <p class="lede">
+          해외 원격 커리어와 AI 업무 자동화를 축으로, 문서와 콘텐츠, 디지털 상품을 만들고 납품하는 1인 스튜디오입니다.
+          화상 회의 없이 서면으로만 진행하고, 결제 전에 범위와 납기를 문장으로 확정합니다.
+        </p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://maily.so/sunnyincome" target="_blank" rel="noopener">무료 레터 받기</a>
+          <a class="btn btn-ghost" href="#services">서비스 둘러보기</a>
+        </div>
+        <p class="foot"><span>1인 스튜디오</span><i>·</i><span>100% 서면·비동기</span><i>·</i><span>결제 전 범위 확정</span></p>
+      </div>
+
+      <aside class="studio-card" aria-label="스튜디오 요약">
+        <div class="top">
+          <img src="assets/logo-128.png" alt="써니 스튜디오 로고">
+          <div>
+            <b>써니 스튜디오</b>
+            <span>Sunny Studio</span>
+          </div>
+        </div>
+        <ul>
+          <li><b>48<i>시간</i></b><span>영문 이력서·링크드인 서면 납품</span></li>
+          <li><b>월 4~8<i>편</i></b><span>블로그·뉴스레터 월간 대행</span></li>
+          <li><b>24<i>시간</i></b><span>영업일 기준 회신</span></li>
+          <li><b>0<i>회의</i></b><span>화상·통화·대면 없이 진행</span></li>
+        </ul>
+        <p class="note">서비스별 실제 조건은 아래 카드와 판매 페이지에 적힌 내용이 기준입니다.</p>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 하는 일 -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">What we do</span>
+        <h2>서류, 콘텐츠, 자동화.<br>세 가지를 한 사람이 끝까지 봅니다.</h2>
+        <p>기획과 작성, 검수와 납품을 나누지 않습니다. 그래서 말이 짧고, 고칠 곳이 명확합니다.</p>
+      </div>
+      <div class="works">
+        <article class="work reveal">
+          <span class="no">01 / DOCUMENT</span>
+          <h3>서류로 뚫는 원격 커리어</h3>
+          <p>지원 공고를 기준으로 이력서와 커버레터를 다시 씁니다. 영어 실력보다 먼저 고칠 것은 구조입니다.</p>
+          <ul>
+            <li>ATS 키워드 진단 리포트</li>
+            <li>영문 CV·커버레터</li>
+            <li>링크드인 헤드라인·About</li>
+          </ul>
+        </article>
+        <article class="work reveal">
+          <span class="no">02 / CONTENT</span>
+          <h3>매달 돌아가는 콘텐츠 운영</h3>
+          <p>주제 선정부터 발행, 리포트까지 한 달 단위로 굴립니다. 손이 비는 달 없이 쌓이는 구조를 만듭니다.</p>
+          <ul>
+            <li>키워드·경쟁 글 분석</li>
+            <li>원고 4~8편과 뉴스레터</li>
+            <li>대표 이미지와 월간 리포트</li>
+          </ul>
+        </article>
+        <article class="work reveal">
+          <span class="no">03 / AUTOMATION</span>
+          <h3>AI로 줄이는 반복 업무</h3>
+          <p>문서 작성과 리뷰 분석, 시장조사처럼 매번 반복되는 일을 프롬프트와 시트, 워크플로로 옮깁니다.</p>
+          <ul>
+            <li>업무별 프롬프트 설계</li>
+            <li>시트·문서 템플릿</li>
+            <li>자동화 흐름 점검</li>
+          </ul>
+        </article>
+      </div>
+
+      <blockquote class="quote reveal">
+        <p>지금도 글로벌 원격 직무 두 개를 병행하고, 그 사이에 매주 해외 공고에 직접 지원합니다.<br>
+        여기 있는 자료와 대행 상품은 그 과정에서 실제로 쓰고, 틀린 곳을 고쳐 만든 것입니다.</p>
+        <footer>써니 스튜디오 · Sunny Studio</footer>
+      </blockquote>
+    </div>
+  </section>
+  <section id="services" class="cream">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Service</span>
+        <h2>B2B · 1:1 서면 대행</h2>
+        <p>모두 비대면 서면으로 진행합니다. 결제 전에 범위·납기·수정 횟수를 문서로 확정하고, 그 범위를 넘는 요청은 따로 견적합니다.</p>
+      </div>
+
+      <div class="services">
+        <article class="svc featured reveal">
+          <span class="badge">주력 · 월 정액</span>
+          <span class="type">Retainer</span>
+          <h3>블로그·뉴스레터<br>월간 대행</h3>
+          <p class="price">월 490,000원부터 <small>스탠다드 790,000원</small></p>
+          <p class="sub">첫 초안 5영업일 · 매달 같은 날짜에 납품</p>
+          <ul>
+            <li>원고 4편(1,500~2,500자) + 뉴스레터 1회</li>
+            <li>대표 이미지 4장 · 기본 키워드 세팅</li>
+            <li>월간 리포트 · 수정 1회</li>
+            <li>스탠다드: 원고 8편 + 뉴스레터 2회 + 키워드 20개 분석</li>
+          </ul>
+          <div class="foot">
+            <span class="lead">1개월 선결제 · 자동 결제 없음</span>
+            <a class="btn btn-dark btn-sm" href="https://ctee.kr/item/store/115234" target="_blank" rel="noopener">자세히 보기</a>
+          </div>
+        </article>
+
+        <article class="svc reveal">
+          <span class="type">One-off</span>
+          <h3>영문 이력서 ATS 최적화<br>+ 링크드인 리뉴얼</h3>
+          <p class="price">149,000원 <small>1회 · 48시간</small></p>
+          <p class="sub">접수 후 48시간 안에 서면 납품</p>
+          <ul>
+            <li>공고 1~3개 대조 ATS 진단 리포트</li>
+            <li>영문 CV 1부 (Word + PDF)</li>
+            <li>커버레터 1부 (300~400단어)</li>
+            <li>링크드인 헤드라인 3안 · About · 경험 3개</li>
+          </ul>
+          <div class="foot">
+            <span class="lead">수정 1회 포함</span>
+            <a class="btn btn-line btn-sm" href="https://ctee.kr/item/store/115228" target="_blank" rel="noopener">자세히 보기</a>
+          </div>
+        </article>
+
+        <article class="svc reveal">
+          <span class="type">New · 상세페이지</span>
+          <h3>이커머스 셀러<br>리뷰 분석 · 상세페이지 리뉴얼</h3>
+          <p class="price">79,000원부터 <small>범위별 견적</small></p>
+          <p class="sub">리뷰 원문을 읽고, 팔리는 문장으로 다시 씁니다</p>
+          <ul>
+            <li>리뷰 원문 분류 (불만·구매 이유·재구매 요인)</li>
+            <li>상세페이지 카피와 구성 순서 리뉴얼</li>
+            <li>경쟁 상품 상세 2~3종 대조</li>
+            <li>수정 1회</li>
+          </ul>
+          <div class="foot">
+            <span class="lead">문의 후 범위 확정</span>
+            <a class="btn btn-line btn-sm" href="#contact">문의하기</a>
+          </div>
+        </article>
+
+        <article class="svc reveal">
+          <span class="type">New · 사업계획서</span>
+          <h3>PSST 사업계획서<br>시장조사 · 진단</h3>
+          <p class="price">129,000원부터 <small>범위별 견적</small></p>
+          <p class="sub">숫자와 논리를 먼저 세우고, 문장을 다듬습니다</p>
+          <ul>
+            <li>시장 규모·경쟁사 조사 (출처 표기)</li>
+            <li>사업계획서 논리 구조 진단</li>
+            <li>예상 질문과 답변 구조 정리</li>
+            <li>수정 1회</li>
+          </ul>
+          <div class="foot">
+            <span class="lead">문의 후 범위 확정</span>
+            <a class="btn btn-line btn-sm" href="#contact">문의하기</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- 진행 방식 -->
+      <div class="steps" style="margin-top:44px">
+        <div class="step reveal">
+          <h3>문의 또는 주문</h3>
+          <p>하고 싶은 일과 지금 상황을 서면으로 남겨주세요. 상담 목적의 문의는 무료입니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>범위 확정</h3>
+          <p>납품물, 납기, 수정 횟수, 포함하지 않는 것을 문장으로 정리해 보냅니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>결제</h3>
+          <p>확정한 범위로 판매 페이지에서 결제합니다. 작업은 결제 확인 후 시작합니다.</p>
+        </div>
+        <div class="step reveal">
+          <h3>납품 · 수정 1회</h3>
+          <p>정한 날짜에 서면으로 납품합니다. 납품 후 7일 안에 문장 단위 수정 1회.</p>
+        </div>
+      </div>
+
+      <div class="promise reveal">
+        <div>
+          <h3>지키는 것</h3>
+          <ul>
+            <li>화상·통화·대면 없이 100% 서면으로 진행합니다.</li>
+            <li>확인되지 않은 수치는 쓰지 않습니다. 출처가 없으면 문장을 뺍니다.</li>
+            <li>범위를 넘는 요청은 따로 견적하고, 임의로 진행하지 않습니다.</li>
+            <li>받은 자료와 계정 권한은 작업 목적 외로 쓰지 않습니다.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>보장하지 않는 것</h3>
+          <ul class="no">
+            <li>검색 순위와 노출, 매출과 문의 수를 보장하지 않습니다.</li>
+            <li>서류 통과·합격·선정을 보장하지 않습니다.</li>
+            <li>플랫폼 정책과 심사 결과는 제가 정할 수 없습니다.</li>
+            <li>광고비, 유료 이미지, 도메인·호스팅 비용은 포함되지 않습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 디지털 킷 -->
+  <section id="kits">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Digital kit &amp; funding</span>
+        <h2>직접 쓰던 것을 정리해 두었습니다</h2>
+        <p>대행이 부담스러울 때, 혼자 시작하고 싶을 때 꺼내 쓰는 실전 자료입니다.</p>
+      </div>
+      <div class="kits">
+        <article class="kit reveal">
+          <span class="tag">펀딩 · 12월 8일 오픈</span>
+          <h3>해외 원격 채용,<br>서류로 뚫기</h3>
+          <p>영문 레주메·ATS·링크드인을 한 세트로 정리한 킷. 알림신청하면 오픈 순간 가장 먼저 안내드립니다.</p>
+          <p class="price">39,000원부터 <small>4단계 리워드</small></p>
+          <a class="btn btn-gold btn-sm" href="https://www.wadiz.io/web/wcomingsoon/rwd/293724" target="_blank" rel="noopener">알림신청 하기</a>
+        </article>
+        <article class="kit reveal">
+          <span class="tag green">상시 판매</span>
+          <h3>PTE 90점<br>실전가이드 + 워크북</h3>
+          <p>신유형 답변 스크립트와 템플릿 19종, 배점 지도 88쪽. 오답 워크북 34쪽을 함께 담았습니다.</p>
+          <p class="price">29,000원 <small>PDF 합본</small></p>
+          <a class="btn btn-line btn-sm" href="https://ctee.kr/item/store/115084" target="_blank" rel="noopener">자세히 보기</a>
+        </article>
+        <article class="kit reveal">
+          <span class="tag navy">월 구독 · 39,000원</span>
+          <h3>글로벌 원격·AI<br>실전 클럽</h3>
+          <p>매주 원격·글로벌 공고 큐레이션, 격주 툴킷, 월 1회 영문 서류 서면 첨삭. 전부 서면으로만 진행합니다.</p>
+          <p class="price">월 39,000원 <small>정기 구독</small></p>
+          <a class="btn btn-line btn-sm" href="https://ctee.kr/place/sunny_studio/membership" target="_blank" rel="noopener">멤버십 보기</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 아카이브 -->
+  <section id="archive" class="cream">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Newsletter &amp; archive</span>
+        <h2>어디서부터 읽을지 모르겠다면, 레터부터</h2>
+        <p>매주 한 통. 해외 원격 공고와 AI 업무 자동화, 혼자 돈이 남는 구조에 대해 쓴 글을 보냅니다.</p>
+      </div>
+      <div class="archive">
+        <div class="letter-card reveal">
+          <span class="lab">Weekly letter</span>
+          <h3>써니의 수익 레터</h3>
+          <p>해외 원격근무와 AI 업무 자동화, 실전 N잡 현금흐름을 다루는 주간 레터입니다. 무료로 구독하고 언제든 해지할 수 있습니다.</p>
+          <a class="btn btn-gold" href="https://maily.so/sunnyincome" target="_blank" rel="noopener">무료로 구독하기</a>
+          <p class="fine">이메일만 남기면 됩니다. 결제 정보는 받지 않습니다.</p>
+        </div>
+        <div class="channels reveal">
+          <a class="channel" href="https://maily.so/sunnyincome" target="_blank" rel="noopener">
+            <span class="t">써니의 수익 레터<span class="d">주간 뉴스레터 · 원격 공고와 수익 구조</span></span>
+            <span class="go">열기 →</span>
+          </a>
+          <a class="channel" href="https://brunch.co.kr/@iseonyeong81" target="_blank" rel="noopener">
+            <span class="t">브런치<span class="d">N잡하는 외국계 직장인 · 26편</span></span>
+            <span class="go">열기 →</span>
+          </a>
+          <a class="channel" href="https://blog.naver.com/yonghwa20826" target="_blank" rel="noopener">
+            <span class="t">네이버 블로그<span class="d">실전 후기와 작업 기록</span></span>
+            <span class="go">열기 →</span>
+          </a>
+          <a class="channel" href="https://www.youtube.com/@happysunny56" target="_blank" rel="noopener">
+            <span class="t">유튜브<span class="d">짧은 영상으로 보는 작업 과정</span></span>
+            <span class="go">열기 →</span>
+          </a>
+          <a class="channel" href="https://www.threads.net/@sunyoung6023" target="_blank" rel="noopener">
+            <span class="t">스레드<span class="d">매일 짧게 쓰는 생각과 공지</span></span>
+            <span class="go">열기 →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">FAQ</span>
+        <h2>시작하기 전에 많이 물으시는 것</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal">
+          <summary>정말 화상 회의는 한 번도 없나요?</summary>
+          <p>없습니다. 모든 상담과 피드백은 문의 창이나 메일로 문장으로 주고받습니다. 그래서 시간대가 달라도, 이동 중이어도 진행이 막히지 않습니다. 대신 질문은 구체적으로 적어주시면 회신이 빨라집니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>결제는 어디서 하나요?</summary>
+          <p>확정한 범위에 따라 판매 페이지에서 결제합니다. 두 개의 대행 상품은 크티 스토어에서, 펀딩 상품은 와디즈에서, 나머지 문의형 작업은 범위를 확정한 뒤 결제 링크를 따로 보내드립니다. 결제 전에는 어떤 금액도 청구되지 않습니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>수정은 몇 번까지 되나요?</summary>
+          <p>납품 후 7일 안에 문장 단위로 1회입니다. 범위를 넘는 대규모 재작성은 별도 견적으로 안내합니다. 처음 범위를 정할 때 이 부분을 문서에 명시하니, 시작 전에 확인하실 수 있습니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>환불은 어떻게 되나요?</summary>
+          <p>작업 시작 전에는 전액 환불됩니다. 작업이 시작된 뒤에는 진행 정도에 따라 판매처(크티·와디즈)의 규정을 따릅니다. 디지털 상품과 멤버십은 열람이 시작되면 환불이 제한됩니다. 각 판매 페이지의 유의사항이 최종 기준입니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>제 자료와 계정은 어떻게 보관하나요?</summary>
+          <p>작업에 필요한 자료만 받고, 목적 외로 쓰지 않습니다. 발행 계정 권한을 주신 경우 종료 시 반납하고, 문의 종료 후 30일 안에 파기합니다. 민감한 개인정보는 처음부터 요청하지 않습니다.</p>
+        </details>
+        <details class="reveal">
+          <summary>합격이나 매출을 보장하나요?</summary>
+          <p>보장하지 않습니다. 대신 무엇을 어떤 순서로 고쳐야 하는지, 어디까지가 제 몫인지를 끝까지 적어 둡니다. 결과를 약속하는 대신 과정을 남기는 쪽을 택했습니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <div class="contact" id="contact">
+    <div class="wrap inner">
+      <div>
+        <h2>지금 막힌 지점부터<br>한 문장으로 적어주세요.</h2>
+        <p>상품 상세페이지, 사업계획서, 이력서, 블로그. 무엇이든 좋습니다. 읽고 영업일 기준 24시간 안에 회신드립니다.</p>
+        <p>범위와 납기, 비용을 먼저 정리해 보내드리고, 그 뒤에 진행 여부를 정하시면 됩니다.</p>
+        <p class="fine">문의만으로는 어떤 비용도 발생하지 않습니다.</p>
+      </div>
+      <div class="box">
+        <h3>문의 접수</h3>
+        <p>9개 항목, 3분이면 끝납니다. 링크가 있으면 함께 붙여주세요.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSehl6GwhXIud6O9ongFebPvjOApQUnF5l1drQgFXSHSMwSZWQ/viewform" target="_blank" rel="noopener">문의 폼 작성하기</a>
+          <a class="btn btn-ghost" href="mailto:sunnyincome@maily.so?subject=%5B%EC%94%A8%EB%8B%88%20%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%5D%20%EB%AC%B8%EC%9D%98">메일로 보내기</a>
+        </div>
+        <a class="mail" href="mailto:sunnyincome@maily.so">sunnyincome@maily.so</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="#top">
+        <img src="assets/logo-128.png" alt="">
+        <span class="name">써니 스튜디오<small>Sunny Studio</small></span>
+      </a>
+      <nav aria-label="바닥 메뉴">
+        <a href="#services">서비스</a>
+        <a href="#kits">실전 킷</a>
+        <a href="#archive">아카이브</a>
+        <a href="#faq">자주 묻는 것</a>
+        <a href="#contact">문의</a>
+        <a href="https://ctee.kr/place/sunny_studio" target="_blank" rel="noopener">스토어</a>
+      </nav>
+    </div>
+    <div class="bottom">
+      <span><strong>써니 스튜디오</strong> · 해외 원격 · AI 업무 자동화 · 수익 구조 스튜디오</span>
+      <span>문의 sunnyincome@maily.so · 평일 24시간 안에 회신</span>
+      <span>표시된 금액과 조건은 각 판매 페이지(크티·와디즈) 기준이며, 플랫폼 정책에 따라 달라질 수 있습니다. 검색 순위·합격·매출을 보장하지 않습니다.</span>
+      <span>© <span id="year">2026</span> Sunny Studio. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "써니 스튜디오",
+  "alternateName": "Sunny Studio",
+  "description": "해외 원격 커리어와 AI 업무 자동화를 축으로 문서·콘텐츠·디지털 상품을 만들고 납품하는 1인 스튜디오. 모든 작업은 서면·비동기로 진행합니다.",
+  "email": "sunnyincome@maily.so",
+  "areaServed": "Worldwide",
+  "knowsLanguage": ["ko", "en"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "블로그·뉴스레터 월간 대행", "price": "490000", "priceCurrency": "KRW"},
+    {"@type": "Offer", "name": "영문 이력서 ATS 최적화 + 링크드인 리뉴얼", "price": "149000", "priceCurrency": "KRW"},
+    {"@type": "Offer", "name": "PTE 90점 실전가이드 + 워크북", "price": "29000", "priceCurrency": "KRW"},
+    {"@type": "Offer", "name": "글로벌 원격·AI 실전 클럽 (월 구독)", "price": "39000", "priceCurrency": "KRW"}
+  ]
+}
+</script>
+<script>
+(function(){
+  var header = document.querySelector('header.site');
+  var onScroll = function(){
+    if (window.scrollY > 8) header.classList.add('is-stuck');
+    else header.classList.remove('is-stuck');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function(){
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    menu.classList.toggle('open', !open);
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){
+      btn.setAttribute('aria-expanded','false');
+      menu.classList.remove('open');
+    }
+  });
+
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
